@@ -1,45 +1,48 @@
-/* CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* styles.css */
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: aqua;
-
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #883737;
 }
 
-.emoji-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+.emoji-container {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    padding: 20px;
-    background-color: aliceblue;
-    border-radius: 8px;
-    box-shadow: 0 10px rgba(red, green, blue, alpha);
-
+    max-width: 800px;
+    justify-content: center;
 }
 
 .emoji-item {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a9fc7;
     padding: 10px;
-    background-color: azure;
-    border: 1px solid darkslategrey;
-    border-radius: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.emoji-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .emoji-item span {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
-.emoji-item code{
-    display: block;
+.emoji-item code {
     margin-top: 5px;
-    color: rgb(2, 11, 17);
+    font-size: 1rem;
+    color: #0a0308;
 }
+
